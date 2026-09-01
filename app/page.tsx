@@ -2,19 +2,21 @@
 import { ArrowDown, ArrowRight, Check, CheckCheck, ChevronRight, Download, FileText, Heart, LockKeyhole, PawPrint, Printer, Ruler, Scissors, ShieldCheck, Sparkles, Shirt } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const CHECKOUT_URL = "https://pay.cakto.com.br/wzdwajo_1078218";
+const PREMIUM_CHECKOUT_URL = "https://pay.cakto.com.br/f93epph";
 function Brand() {return <a href="#inicio" className="brand" aria-label="Moldes — Roupas de Pet, início"><span className="brand-mark"><PawPrint size={24} strokeWidth={1.7}/></span><span><strong>moldes<span className="brand-dot">.</span></strong><small>ROUPAS DE PET</small></span></a>;}
 function Cta({children="Quero começar a produzir para vender"}: {children?: React.ReactNode}) {return <a href="#oferta" className="cta">{children}<ArrowRight size={20} aria-hidden="true"/></a>;}
 function Purchase() {
  return <a className="cta purchase" href={CHECKOUT_URL}>Quero começar por R$ 9,90<ArrowRight size={20}/></a>;
 }
 const faqs = [
+["Qual a diferença entre Essencial e Premium?","O Essencial reúne a coleção de moldes e os materiais de apoio por R$ 9,90. O Premium custa R$ 27,90 e inclui tudo do Essencial mais o Kit Primeiras Vendas Pet em PDF: guia de precificação, 12 textos para WhatsApp e Instagram, roteiro de fotos e catálogo, e checklist da primeira encomenda. Os bônus orientam a divulgação e a organização das vendas; não são um curso de costura nem uma promessa de renda."],
 ["Preciso saber costurar?","Sim, é importante ter noções básicas de costura para confeccionar as peças. Os moldes facilitam a modelagem: você não precisa desenhar cada peça do zero. O produto é uma coleção digital de moldes, não um curso de costura."],
 ["E se eu não tiver impressora?","Você pode baixar os arquivos em PDF e levá-los ou enviá-los a uma gráfica ou papelaria que faça impressões. Peça para respeitarem a escala indicada no arquivo. Não é necessário comprar uma impressora."],
 ["O que exatamente vou receber?","Acesso a uma pasta no Google Drive com mais de 100 arquivos em PDF, entre modelos e tamanhos de roupas pet, além de materiais extras de apoio. O produto é totalmente digital: você não recebe roupas, tecidos ou moldes pelo correio."],
 ["Os moldes têm tamanhos diferentes?","Sim. A coleção inclui diferentes medidas. Antes de cortar o tecido, tire as medidas do pet e compare com as informações do molde escolhido. Dependendo do corpo do animal, pequenos ajustes podem ser necessários."],
 ["Como e quando recebo o acesso?","Após a confirmação do pagamento, você recebe as instruções para acessar a pasta de materiais no Google Drive. O prazo de confirmação pode variar conforme a forma de pagamento."],
 ["Posso produzir as roupinhas para vender?","Sim. Você pode utilizar os moldes para confeccionar suas próprias peças e oferecê-las a clientes. Sua renda depende dos custos, da qualidade das peças, da divulgação e das vendas realizadas."],
-["Tem mensalidade? E se eu não gostar?","O valor de R$ 9,90 é um pagamento único, sem mensalidade. Você tem 7 dias após a compra para conhecer o material e solicitar reembolso pelo canal indicado na confirmação do pedido, caso ele não seja adequado para você."]
+["Tem mensalidade? E se eu não gostar?","O Essencial custa R$ 9,90 e o Premium custa R$ 27,90. Ambos têm pagamento único, sem mensalidade. Você tem 7 dias após a compra para conhecer o material e solicitar reembolso pelo canal indicado na confirmação do pedido, caso ele não seja adequado para você."]
 ];
 export default function Home(){return <>
 <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -57,24 +59,26 @@ export default function Home(){return <>
     </div>
    </article>
    <article className="offer-card premium-card" aria-labelledby="premium-title">
-    <div className="premium-ribbon"><Sparkles size={15}/>NOVA EDIÇÃO</div>
-    <div className="offer-label"><Sparkles size={18}/>UM NOVO PASSO NA SUA JORNADA</div>
+    <div className="premium-ribbon"><Sparkles size={15}/>MOLDES + KIT DE VENDAS</div>
+    <div className="offer-label"><Sparkles size={18}/>PARA PRODUZIR E COMEÇAR A VENDER</div>
     <h3 id="premium-title">Premium</h3>
     <p className="offer-subtitle">Moldes — Roupas de Pet</p>
-    <p className="plan-description">Uma nova opção para sua jornada de produção e venda de roupas pet.</p>
-    <div className="premium-preview">
-     <span className="premium-preview-icon"><Scissors size={30} strokeWidth={1.3}/></span>
-     <h4>Estamos preparando esta edição.</h4>
-     <p>Os conteúdos e diferenciais do Premium serão apresentados antes da abertura das vendas.</p>
-    </div>
+    <p className="plan-description">Além de produzir, saiba como calcular o preço, apresentar suas peças e buscar suas primeiras encomendas.</p>
+    <ul className="check-list premium-benefits">
+     <li><Check/><span><strong>Tudo do Essencial</strong><small>Coleção de moldes e materiais de apoio inclusos.</small></span></li>
+     <li><Check/><span><strong>Guia de precificação</strong><small>Organize custos, valorize seu tempo e planeje sua margem.</small></span></li>
+     <li><Check/><span><strong>12 textos prontos de venda</strong><small>Adapte as mensagens para WhatsApp e Instagram.</small></span></li>
+     <li><Check/><span><strong>Roteiro de fotos e catálogo</strong><small>Mostre os detalhes que ajudam a vender suas peças.</small></span></li>
+     <li><Check/><span><strong>Checklist da primeira encomenda</strong><small>Organize divulgação, atendimento, medidas e entrega.</small></span></li>
+    </ul>
     <div className="plan-bottom">
-     <div className="offer-price"><span>Valor da edição Premium</span><div><span>R$</span><strong>27,90</strong></div><small>Em breve, uma nova possibilidade.</small></div>
-     <button type="button" className="cta purchase premium-purchase" disabled aria-describedby="premium-status">Premium em breve<LockKeyhole size={18}/></button>
-     <p className="payment-note" id="premium-status">Compra ainda não disponível.</p>
+     <div className="offer-price"><span>Valor da edição Premium</span><div><span>R$</span><strong>27,90</strong></div><small>Pagamento único. Sem mensalidade.</small></div>
+     <a className="cta purchase premium-purchase" href={PREMIUM_CHECKOUT_URL}>Quero o Premium por R$ 27,90<ArrowRight size={18}/></a>
+     <p className="payment-note"><LockKeyhole size={14}/>Garantia de 7 dias · Conteúdo digital</p>
     </div>
    </article>
   </div>
-  <div className="offer-guarantee"><ShieldCheck size={40} strokeWidth={1.4}/><div><h3>Seu primeiro passo tem 7 dias de garantia.</h3><p>Conheça a coleção Essencial. Se o material não for adequado para você, solicite o reembolso dentro de 7 dias após a compra.</p></div></div>
+  <div className="offer-guarantee"><ShieldCheck size={40} strokeWidth={1.4}/><div><h3>Seu primeiro passo tem 7 dias de garantia.</h3><p>Conheça o conteúdo do plano escolhido. Se o material não for adequado para você, solicite o reembolso dentro de 7 dias após a compra.</p></div></div>
  </div>
 </section>
 <section className="faq-section section container" id="duvidas"><div className="faq-intro"><p className="eyebrow">ANTES DO PRIMEIRO PONTO</p><h2>Vamos tirar<br/>suas <em>dúvidas?</em></h2><p>Os detalhes que você precisa saber para começar com confiança.</p><a className="text-link" href="#oferta">Já quero meus moldes<ChevronRight size={18}/></a></div><Accordion type="single" collapsible className="faq-list" defaultValue="faq-0">{faqs.map(([question,answer],i)=><AccordionItem key={question} value={'faq-'+i} className="faq-item"><AccordionTrigger className="faq-trigger">{question}</AccordionTrigger><AccordionContent className="faq-content">{answer}</AccordionContent></AccordionItem>)}</Accordion></section>

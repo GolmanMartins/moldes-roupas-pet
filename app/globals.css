@@ -58,3 +58,10 @@
 .income-numbers small{font-size:.875rem;color:#745866}
 .income-example>p{font-size:.75rem;color:#846c76;margin-top:23px;line-height:1.75}
 @media(max-width:760px){.income-example{margin-top:5px;padding:25px 22px}.income-numbers{grid-template-columns:1fr;gap:17px}.income-numbers>div{padding:0 0 17px;border-right:0;border-bottom:1px solid #e8cfd8}.income-numbers>div:last-child{border-bottom:0;padding-bottom:0}.income-numbers strong{font-size:2.5rem}.income-example-title h3{font-size:1.6rem}.hero .cta{font-size:.875rem;gap:15px}}
+.premium-benefits li{align-items:flex-start;gap:11px}
+.premium-benefits li>svg{margin-top:3px}
+.premium-benefits strong{display:block;color:#68354b;font-size:.875rem}
+.premium-benefits small{display:block;color:#735465;font-size:.8125rem;line-height:1.6;margin-top:4px}
+.premium-card .premium-purchase{background:#653549;color:#fff6fa;box-shadow:0 5px 0 #46203315}
+.premium-card .premium-purchase:hover{background:#4d2537}
+.premium-ribbon{white-space:nowrap;letter-spacing:.7px}
