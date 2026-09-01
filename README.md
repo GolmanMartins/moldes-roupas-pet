@@ -1,4 +1,29 @@
-# vinext-starter
+# Moldes - Roupas de Pet
+
+Landing page da coleção de moldes pet, com ofertas Essencial e Premium, checkout Cakto e Meta Pixel.
+
+## Deploy na Vercel
+
+O arquivo `vercel.json` configura o preset Next.js, a instalação com `npm ci`, o build com `npm run build:vercel` e a saída `.next`.
+
+- Importe este repositório na Vercel e use a raiz do repositório como Root Directory.
+- Para uma tentativa nova, publique o commit mais recente da branch `main`.
+- Para testar o mesmo build localmente: `npm run build:vercel`.
+- Para desenvolvimento em Next.js: `npm run dev:next`.
+- Para servir o build local: `npm run start:next`.
+
+`npm run build` preserva o build Vinext/Cloudflare da hospedagem Sites. A Vercel usa o comando específico acima.
+A configuração `tsconfig.next.json` mantém a checagem estrita da aplicação e suas dependências importadas, sem incluir os exemplos e o Worker exclusivos da Cloudflare.
+
+## Conteúdo e integrações
+
+- Página e links de checkout: `app/page.tsx`.
+- Estilos: `app/globals.css`.
+- Meta Pixel e evento PageView: `lib/meta-pixel.ts`, instalado por `app/layout.tsx`.
+- O conteúdo pago deve ser configurado na entrega do produto na plataforma de checkout.
+
+## Hospedagem original
+
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
 

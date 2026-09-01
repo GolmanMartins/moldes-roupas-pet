@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Check the Next.js application independently of the Cloudflare worker.
+  typescript: {
+    tsconfigPath: "tsconfig.next.json",
+  },
 };
 
 export default nextConfig;
