@@ -1,6 +1,6 @@
 // User-supplied Meta Pixel. The page-level guard prevents duplicate PageViews
 // if the framework remounts the inline script during client navigation.
-export const META_PIXEL_ID = "1016728280541570";
+export const META_PIXEL_ID = "2685463171848542";
 export const META_PIXEL_SCRIPT = `
 if (!window.__moldesMetaPixelLoaded) {
   !function(f,b,e,v,n,t,s)
@@ -11,7 +11,7 @@ if (!window.__moldesMetaPixelLoaded) {
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1016728280541570');
+  fbq('init', '2685463171848542');
   fbq('track', 'PageView');
   window.__moldesMetaPixelLoaded = true;
 }
